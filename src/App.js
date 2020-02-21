@@ -31,9 +31,13 @@ class App extends Component {
 
 
     return (
-      <div className="App">
-          <h1 className="title">Help Greta!</h1> 
-          <input className="input"></input>
+      <div className="root">
+        <div className="main_app">
+        <h1 className="title">Help Greta!</h1> 
+          <div className="filters">
+            <input className="input" placeholder=" Barcelona"></input>
+            <button className="sort_button">Sort</button>
+          </div>
 
         <Switch>
           
@@ -56,7 +60,7 @@ class App extends Component {
           
         </Switch>
 
-
+        </div>
       </div>
     );
   }

@@ -17,7 +17,7 @@ class Detail extends Component {
         const { dataList } = this.props;
         console.log('son las props de details', this.props)
 
-        const item = dataList.find(e => e.id == citiesID)
+        const item = dataList.find(e => e.id === citiesID)
         console.log('esto es el item', item)
         this.setState({item})
     
