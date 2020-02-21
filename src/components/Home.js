@@ -8,7 +8,7 @@ class Home extends Component {
         return (
             <div className="list" >
                 <ul className="list_cities">
-                    {this.props.dataList.map( cities => (
+                    {this.props.citiesFilter.map( cities => (
                     <Link to={`/detail/${cities.id}`}>
                         <li className="cities_item" key={cities.id}>
                             <div className="item_city">{cities.city}</div>
