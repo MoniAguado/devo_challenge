@@ -29,9 +29,16 @@ class App extends Component {
 
   handleFilter = (event) => {
     this.setState({
-      inputText: event.target.value
+      inputText: event.target.value,
     });
-   
+  }
+
+  handleSort = () => {
+    const citiesSort = this.state.dataList.sort((a, b) => b.cities - a.cities)
+    console.log('este sort que', citiesSort)
+    this.setState({
+      dataList: citiesSort,
+    })
   }
 
 
@@ -45,7 +52,7 @@ class App extends Component {
       .includes(this.state.inputText.toUpperCase()
     )})
 
-    const { dataList, inputText } = this.state
+    const { dataList, inputText, citiesSort } = this.state
 
 
     return (
@@ -60,7 +67,11 @@ class App extends Component {
               inputText={inputText}>
 
             </input>
-            <button className="sort_button">Sort</button>
+            <button
+              className="sort_button"
+              onChange={this.handleSort}
+              citiesSort={citiesSort}>Sort
+            </button>
           </div>
 
         <Switch>

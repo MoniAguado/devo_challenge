@@ -94,3 +94,37 @@ h1 {
 .item_pollution {
   width: 30%;
 }
+
+.detail {
+  margin: 60px;
+  padding: 0 30px 0 30px;
+}
+
+.detail_header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+ 
+}
+
+.detail_title_city {
+  position: relative;
+  letter-spacing: -0.18px;
+  font-size: 20px;
+  line-height: 24px;
+  color: #4a2c07;
+}
+
+.return {
+  position: absolute;
+  margin-left: 430px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 75%;
+}
+
+.detail_cities {
+  margin-top: 20px;
+}
