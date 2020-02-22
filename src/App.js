@@ -34,7 +34,7 @@ class App extends Component {
   }
 
   handleSort = () => {
-    const citiesSort = this.state.dataList.sort((a, b) => b.cities - a.cities)
+    const citiesSort = this.state.dataList.sort((a, b) => b.city - a.city)
     console.log('este sort que', citiesSort)
     this.setState({
       dataList: citiesSort,
@@ -46,8 +46,8 @@ class App extends Component {
 
     console.log('Lista', this.state.dataList)
 
-    citiesFilter = this.state.dataList.filter( cities => {
-      return  cities.city
+    citiesFilter = this.state.dataList.filter( city => {
+      return  city.city
       .toUpperCase()
       .includes(this.state.inputText.toUpperCase()
     )})
@@ -77,7 +77,7 @@ class App extends Component {
         <Switch>
           
           <Route
-            path="/detail/:charactersID"
+            path="/detail/:cityID"
             render={routerProps => {
               console.log('GUARROOOOOO', dataList )
               return (
@@ -90,7 +90,6 @@ class App extends Component {
           </Route>
           <Route path="/">
             <Home
-              dataList={dataList}
               citiesFilter={citiesFilter}/>
           </Route>
           
