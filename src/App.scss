@@ -31,7 +31,7 @@
   background-color: #ffffff;
   opacity: 0.8;
   transform: translate(-50%, -50%);
-  @media all and (max-width: 900px) {
+  @media all and (max-width: 700px) {
    display: flex;
    flex-direction: column;
   }
@@ -55,6 +55,22 @@ h1 {
   margin: 20px;
   display: flex;
   justify-content: space-evenly;
+  @media all and (max-width: 700px) {
+    flex-direction: column;
+    margin-bottom: 20px;
+   }
+}
+
+.input {
+  @media all and (max-width: 700px) {
+    max-width: 200px;
+   }
+}
+
+.buttons_box {
+  @media all and (max-width: 700px) {
+    margin-top: 10px;
+   }
 }
 
 .list {
@@ -73,9 +89,17 @@ h1 {
   padding: 20px;
   border-bottom: 1px solid rgba(74, 44, 7, 0.16);
   color: #4a2c07;
-  @media all and (max-width: 900px) {
+  @media all and (max-width: 700px) {
     flex-direction: column;
     margin-bottom: 20px;
+    padding: 10px;
+   }
+}
+
+.item {
+  @media all and (max-width: 700px) {
+    flex-direction: column;
+    margin-bottom: 10px;
    }
 }
 
@@ -123,6 +147,12 @@ h1 {
   cursor: pointer;
   font-size: 16px;
   margin-left: 75%;
+  @media all and (max-width: 700px) {
+    margin-left: 65%;
+   }
+   @media all and (max-width: 550px) {
+    margin-left: 50%;
+   }
 }
 
 .detail_cities {
@@ -133,8 +163,6 @@ h1 {
 
 .detail_map {
   margin: 20px;
-  background-color: #fff;
-  opacity: 1;
 }
 
 
