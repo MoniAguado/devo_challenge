@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
+import {Map, Marker, GoogleApiWrapper} from 'google-maps-react';
+import credentials from '../credentials';
 
 class Detail extends Component {
-
-  
     constructor(props) {
         super(props)
 
@@ -16,22 +15,14 @@ class Detail extends Component {
     componentDidMount() {
         const { cityID } = this.props.routerProps.match.params;
         const cityParse = parseInt(cityID)
-        console.log('esto son los details', cityID)
         const { dataList } = this.props;
-        console.log('son las props de details', this.props)
-
         const item = dataList.find(e => e.id === cityParse)
-        console.log('esto es el item', item)
         this.setState({item})
-        console.log('esto es el item seteado', item)
-
-        
     }
 
 
     render() {
-        const { city, country, pollution, lat, lng } = this.state.item
-        console.log('csdkf', city)
+        const { city, lat, lng } = this.state.item
         return (
              <div className="detail" >
                  <div className="detail_header">
@@ -41,16 +32,30 @@ class Detail extends Component {
                         </Link>
                     </button>
                </div>
-                <div className="detail_cities" >
-                    <div className="detail_country">Country: {country}</div>
-                    <div className="detail_pollution">Pollution: {pollution}</div>
-                    <div>Lattitud: {lat}</div>
-                    <div>Longitude: {lng}</div>
-                </div>
-               
+
+               <div className="detail_map">
+                    {lat && (<Map 
+                        google={this.props.google}
+                        zoom={12}
+                        style={{width: '80%', height: '300px'}}
+                        initialCenter={{
+                            lat: lat,
+                            lng: lng}}>
+                        <Marker 
+                            position={{
+                                lat: lat,
+                                lng: lng}}
+                        />
+                    </Map>)}
+               </div>
            </div>
         )
     }
 }
 
-export default Detail;
+
+export default GoogleApiWrapper({
+    apiKey: (credentials.mapsKey)
+  })(Detail)
+
+
