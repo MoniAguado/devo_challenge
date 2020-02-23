@@ -1,0 +1,53 @@
+{
+    "cities": [
+        {
+            "id": 1,
+            "city": "Barcelona",
+            "country": "Spain",
+            "pollution": 70.58,
+            "lat": 41.382894,
+            "lng": 2.177432
+        },
+        {
+            "id": 2,
+            "city": "Skopje",
+            "country": "Macedonia",
+            "pollution": 80.18,
+            "lat": 41.996092,
+            "lng": 21.43165
+        },
+        {
+            "id": 3,
+            "city": "Turin",
+            "country": "Italy",
+            "pollution": 77.26,
+            "lat": 45.067755,
+            "lng": 7.682489
+        },
+        {
+            "id": 4,
+            "city": "Krakow",
+            "country": "Poland",
+            "pollution": 69.06,
+            "lat": 50.061947,
+            "lng": 19.936856
+        },
+        {
+            "id": 5,
+            "city": "Kiev",
+            "country": "Ukraine",
+            "pollution": 75.54,
+            "lat": 50.450034,
+            "lng": 30.524136
+        },
+        {
+            "id": 6,
+            "city": "Rome",
+            "country": "Italy",
+            "pollution": 67.73,
+            "lat": 41.89332,
+            "lng": 12.482932
+        }
+       
+    ]
+}
